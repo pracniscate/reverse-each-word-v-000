@@ -12,10 +12,16 @@
 
 #COLLECT
 
-def reverse_each_word(string)
-  words = string.split
-  new_string = []
-  # words.collect {|word| new_string << words.reverse!}
-  (words.collect{|word| words.reverse}).join(" ")
-  # new_string.join(" ")
+# def reverse_each_word(string)
+#   words = string.split
+#   new_string = []
+#   # words.collect {|word| new_string << words.reverse!}
+#   (words.collect{|word| words.reverse}).join(" ")
+#   # new_string.join(" ")
+# end
+
+def reverse_each_word(sentence)
+  new_sentence = Array.new
+  new_sentence = sentence.split
+  (new_sentence.map{|word| word.reverse}).join(" ")
 end
