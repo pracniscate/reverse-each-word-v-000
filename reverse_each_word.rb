@@ -23,5 +23,5 @@
 def reverse_each_word(sentence)
   new_sentence = Array.new
   new_sentence = sentence.split
-  (new_sentence.map{|word| word.reverse}).join(" ")
+  (new_sentence.collect{|word| word.reverse}).join(" ")
 end
