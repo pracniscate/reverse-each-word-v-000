@@ -5,10 +5,7 @@ def reverse_each_word(string)
   words = string.split(" ")
   # loop through each word in a string & add reversed word to a new array
   new_string = []
-  words.each do |word|
-    new_string << words.reverse
-  end
-  #words.each {|word| new_string << words.reverse!}
+  words.each {|word| new_string << words.reverse!}
   # convert new array of reversed words into string by joining elements by space
   puts new_string.join(" ")
 end
@@ -18,6 +15,7 @@ end
 def reverse_each_word(string)
   words = string.split
   new_string = []
-  words.collect {|word| new_string << words.reverse!}
-  new_string.join(" ")
+  # words.collect {|word| new_string << words.reverse!}
+  (words.collect{|word| words.reverse}).join(" ")
+  # new_string.join(" ")
 end
